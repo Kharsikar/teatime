@@ -1,0 +1,286 @@
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.6;
+	color: #777777;
+	font-weight: 300;
+	background-color: #fffffff;
+}
+
+.container {
+	/* max-width works with responsive sites and does not cause scroll bars, squashes content inside as the screen shrinks */
+	max-width: 960px;
+	margin: 0 auto 0 auto;
+	/*border: solid 2px #FF7163;*/
+	/* can use 4 x 0 or just 1 x 0 */
+	padding: 0;
+}
+
+header {
+	background-color: #ffffff;
+	height: 75px;
+	/* element scrolls up and down with you */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	/* 1. from the left or right. right is + left is - number. */
+	/* 2. from the top or bottom. bottom is + top is - number. */
+	/* 3. spread/feather of the shadow - how harsh the line is */
+	/* 4. colour of the shadow - rgba so we can set opacity */
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+nav {
+	float: right;
+	line-height: 75px;
+}
+
+nav a {	
+	color: #777777;
+	text-decoration: none;
+	padding: 0 15px 0 15px;
+	display: inline-block;
+
+}
+nav a:hover {
+	background-color: #111111;
+	color: #ffffff;
+}
+h1 {
+	float: left;
+	line-height: 75px;
+
+}
+
+h1 img {
+	/* position text or images based on the height. default for text is to sit in the middle of the line, default for images is to sit on the bottom. */
+	vertical-align: middle;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 1;
+}
+
+
+
+
+/*section {	
+	margin: 0 auto 0 auto;
+	background-color: #FCFCFC;
+
+}*/
+
+/* section with background image */
+.intro {
+	/* pushes the intro down to the same height as if the header was there */
+	margin: 75px 0 0 0;
+	background: url(../images/blur-bg.jpg) center no-repeat;
+	background-size: cover;
+	height: 600px;
+	/* when a specific height or width have been set things can fall out/overlay */
+	overflow: hidden;
+
+	
+}
+
+.iphone {
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 30px 10px 0 0;
+	
+}
+
+.iphone img {
+	margin: 50px 0 0 0;
+}
+
+.lead {
+	width: 50%;
+	float: right;
+	/* add padding to push content away from the sides */
+	padding: 120px 70px 0 55px;
+}
+
+.lead p {
+	padding: 40px 0 40px 0;
+}
+
+/* about section */
+.about {
+	background-color: #ffffff;
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+}
+
+h3 {
+	font-size: 36px;
+	font-weight: 100;
+	line-height: 1.8;
+
+}
+
+.feature {
+	padding: 70px 0 70px 0;
+	text-align: center;
+}
+
+.feature p {
+	padding: 0 45px 0 45px;
+
+}
+
+
+/* quote section */
+
+.quotes {
+	background-color: #f6f6f6;
+	text-align: center;
+	padding: 40px 20px 40px 20px;
+}
+
+/*.quotes .columns { 
+	margin: 0 20px 0 20px;
+
+}*/
+
+.tile {
+	background-color: #ffffff;
+	margin: 0 40px 0 20px;
+	border: solid 1px #e1e1e1;
+	border-radius: 5px;
+	padding: 40px 40px 40px 40px;
+}
+
+ blockquote {
+ 	font-size: 22px;
+ 	margin: 0 0 20px 0;
+ }
+
+.tile h3 {
+	margin: 0 0 20px 0;
+}
+.tile p {
+	margin: 20px 0 20px 0;
+}
+.tile img {
+	width: 70px;
+	border-radius: 50%;
+
+}
+
+/* map section */
+
+
+
+.contact {
+	background: url(../images/map.jpg) center no-repeat;
+	background-size: cover;
+	background-color: #959597;
+	padding: 80px 0 80px 0;
+	text-align: center;	
+}
+
+.contact a {
+	color: #444444;
+}
+
+input, textarea {
+	width: 100%;
+	margin: 10px 0 10px 0;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+
+}
+
+textarea {
+	/* can the textarea be resized by the user? */
+	resize: vertical;
+	height: 150px;
+}
+
+input[type="submit"]{
+	background-color: #000000;
+	color: #ffffff;
+	width: 120px;
+	float: right;
+
+}
+
+/* footer section */
+footer {
+	text-align: center;
+	color: #777777;
+	padding: 50px 50px 50px 50px;
+}
+
+footer a {
+	text-decoration: none;
+	margin: 0 15px 0 15px;
+}
+
+small {
+	display: block;
+	margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 960px){
+
+/* stop floats everywhere, h1, nav, iphone etc */
+		h1, nav, .iphone, .lead, .about, input[type="submit"], .quotes {
+			float: none;
+			width: 100%;
+
+		}
+
+		header {
+			height: auto;
+			text-align: center;
+			position: static;
+		}
+		.intro{
+			margin: 0px;
+		}
+		nav a{
+			display: block;
+		}
+
+		.lead {
+			padding: 10px 60px 10px;
+
+		}
+		.lead p{
+			margin: 10px 0 10px 0;
+
+		}
+		h3 {
+			margin: 10px 0 10px 0;
+
+		}
+
+		.intro {
+			height: 800px;
+		}
+
+		.coloumns {
+			padding: 20px 0;
+		}
+
+		form {
+			width: 80%;
+			margin: 0 auto 0 auto;
+		}
+
+/* stack menu items */
+
+/* remove some excess padding around */
+
+
+
+
+
+}
